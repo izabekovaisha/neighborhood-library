@@ -10,10 +10,11 @@ public class NeighborhoodLibrary {
         books[0] = new Book(1, "395-8-48-483632-5", "The Montessori Method");
         books[1] = new Book(2, "595-8-43-069816-3", "Napkin Finance");
         books[2] = new Book(3, "693-2-19-438408-7", "Data Warehouse");
-        books[3] = new Book(4, "693-2-19-438408-7", "Data Warehouse");
+        books[3] = new Book(4, "693-2-19-438408-7", "Rich Dad Poor Dad");
         books[4] = new Book(5, "695-6-71-079375-8", "Don't Swear The Small Stuff");
 
         Scanner scanner = new Scanner(System.in);
+
         // The home screen is displaying a list of options that a user can choose from
         while (true) {
             System.out.println("Welcome to the the Neighborhood Library. Please choose an option to continue");
@@ -22,6 +23,7 @@ public class NeighborhoodLibrary {
             System.out.println("3 to Exit");
             int response = scanner.nextInt();
             scanner.nextLine();
+
             // The switch statement handles the user's choice. It calls different methods based on the user's input:
             switch (response) {
                 case 1:
@@ -48,9 +50,9 @@ public class NeighborhoodLibrary {
                 System.out.println("ID: " + book.getId() + ", ISBN: " + book.getIsbn() + ", Title: " + book.getTitle());
             }
         }
-        System.out.println("Select a book to check out (enter ID) or type 'exit' to go back to home screen:");
+        System.out.println("Select a book to check out (enter ID) or type 'Exit' to go back to home screen:");
         String input = scanner.nextLine();
-        if (input.equalsIgnoreCase("exit")) {
+        if (input.equalsIgnoreCase("Exit")) {
             return;
         }
         int selectedId = Integer.parseInt(input);
@@ -83,7 +85,7 @@ public class NeighborhoodLibrary {
             case "X":
                 return;
             default:
-                System.out.println("Invalid choice.");
+                System.out.println("Invalid choice");
         }
     }
 
