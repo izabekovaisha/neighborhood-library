@@ -3,9 +3,9 @@ package com.pluralsight;
 import java.util.Scanner;
 
 public class NeighborhoodLibrary {
+
     public static void main(String[] args) {
 
-        // The array to hold the inventory of books
         Book[] books = new Book[5];
         books[0] = new Book(1, "395-8-48-483632-5", "The Montessori Method");
         books[1] = new Book(2, "595-8-43-069816-3", "Napkin Finance");
@@ -15,7 +15,6 @@ public class NeighborhoodLibrary {
 
         Scanner scanner = new Scanner(System.in);
 
-        // The home screen is displaying a list of options that a user can choose from
         while (true) {
             System.out.println("Welcome to the the Neighborhood Library. Please choose an option to continue");
             System.out.println("1 to Show Available Books");
@@ -24,7 +23,6 @@ public class NeighborhoodLibrary {
             int response = scanner.nextInt();
             scanner.nextLine();
 
-            // The switch statement handles the user's choice. It calls different methods based on the user's input:
             switch (response) {
                 case 1:
                     showAvailableBooks(books, scanner);
@@ -42,7 +40,7 @@ public class NeighborhoodLibrary {
         }
     }
 
-    // Method to show available books
+
     public static void showAvailableBooks(Book[] books, Scanner scanner) {
         System.out.println("Available Books:");
         for (Book book : books) {
@@ -66,7 +64,7 @@ public class NeighborhoodLibrary {
         }
     }
 
-    // Method to show checked out books
+
     public static void showCheckedOutBooks(Book[] books, Scanner scanner) {
         System.out.println("Checked Out Books:");
         for (Book book : books) {
@@ -89,11 +87,11 @@ public class NeighborhoodLibrary {
         }
     }
 
-    // Method to check in a book
+
     public static void checkInBook(Book[] books, Scanner scanner) {
         System.out.println("Enter the ID of the book you want to check in:");
         int id = scanner.nextInt();
-        scanner.nextLine(); // Consume newline
+        scanner.nextLine();
         for (Book book : books) {
             if (book.getId() == id) {
                 book.checkIn();

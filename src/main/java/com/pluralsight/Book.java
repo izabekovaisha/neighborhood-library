@@ -1,6 +1,5 @@
 package com.pluralsight;
 
-// Properties
 public class Book {
     private int id;
     private String isbn;
@@ -8,7 +7,6 @@ public class Book {
     private boolean isCheckedOut;
     private String checkedOutTo;
 
-    // Constructor
     public Book(int id, String isbn, String title) {
         this.id = id;
         this.isbn = isbn;
@@ -17,7 +15,6 @@ public class Book {
         this.checkedOutTo = "";
     }
 
-    // Getters and Setters
     public int getId() {
         return id;
     }
@@ -58,7 +55,6 @@ public class Book {
         this.checkedOutTo = checkedOutTo;
     }
 
-    // Method for checking out
     public void checkOut(String name) {
         if (!isCheckedOut) {
             isCheckedOut = true;
@@ -69,7 +65,6 @@ public class Book {
         }
     }
 
-        // Method for checking in
         public void checkIn() {
             if (isCheckedOut) {
                 isCheckedOut = false;
